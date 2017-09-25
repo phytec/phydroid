@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <manifest>
-  <phytec pdn="PD17.1.0" release_uid="BSP-Android-i.MX6-PD17.1.0" soc="iMX6" />
+  <phytec pdn="PD17.1.0" release_uid="BSP-Android-i.MX6-ALPHA1" soc="iMX6" />
 
 
   <remote fetch="https://android.googlesource.com/" name="aosp"/>
