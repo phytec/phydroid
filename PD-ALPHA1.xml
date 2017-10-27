@@ -10,7 +10,7 @@
   <default remote="aosp" revision="refs/tags/android-5.0.2_r1" sync-j="8"/>
 
   <!-- PHYTEC -->
-  <project path="kernel" name="linux-imx-dev" remote="ssh.phytec" revision="2f5756aaa2cbea7da63928e624be8b4b98afd13a" />
+  <project path="kernel" name="linux-imx" remote="ssh.phytec" revision="2f5756aaa2cbea7da63928e624be8b4b98afd13a" />
   <project path="barebox" name="barebox" remote="ssh.phytec" revision="edc79008216a58fcbef6972918987b2734d8a956" />
   <project path="vendor/SIGMA/miraq" name="vendor" remote="ssh.phytec" revision="1a73a39b644516c944fe33e994a9e0051a0d1564" />
   <project path="build" name="platform/build" remote="ssh.phytec" revision="9e9f10db4a94b8f38fe64f7f1aa2d65cea94966c" groups="pdk,tradefed" >
