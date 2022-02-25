@@ -29,7 +29,7 @@
 
   <remote name="github.phytec" fetch="git://github.com/phytec"/>
 
-  <phytec pdn="PD-ALPHA1-next" release_uid="BSP-Android-i.MX8MP-ALPHA1-next" soc="iMX8MP" build_container="androidbuild-ubuntu20.04" />
+  <phytec pdn="PD-ALPHA1-next" release_uid="BSP-Android-NXP-i.MX8MP-ALPHA1-next" soc="iMX8MP" build_container="androidbuild-ubuntu20.04" />
 
   <!-- phytec -->
   <project path="vendor/nxp-opensource/uboot-imx" name="android-u-boot-imx" remote="github.phytec" revision="android-11.0.0_1.2.1-phy" />
