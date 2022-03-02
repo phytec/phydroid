@@ -1,0 +1,58 @@
+BSP-Android-NXP-i.MX8MP-ALPHA1        2022-03-02
+====================================================
+
+- Linux NXP Vendor Kernel v5.4.70_2.3.2 (based on NXP tag android-11.0.0_1.2.1)
+- U-boot v2020.04_2.3.2 (based on NXP tag android-11.0.0_1.2.1)
+- Android 11 (based on aosp android-11.0.0_r18 and vendor patched components
+  based on imx-android-11.0.0_1.2.1)
+
+NOTE:
+This is an ALPHA release and has not been tested for full functionality. It is
+possible that some features are not working correct or stable.
+
+Build Environment:
+------------------
+- Docker enviroment using Ubuntu 20.04 64-bit
+
+Features:
+---------
+- Hardware support:
+    * phyBOARD-Pollux kit board PB-03123-001.A1 / PB-03123-002.A1
+    * Display adapter PEB-AV-010 with an LCD-AC168 display
+    * Wifi/BLE adapter PEB-WLBT-05 for Wifi
+- Booting from SD-Card is supported
+- Ethernet support
+- Wifi support
+- USB Host and ADB connection
+
+Known Issues/Limitations:
+-------------------------
+- Due to PCB layout constraints in PCB revisions until including 1549.2,
+  a RAM frequency of 2 GHz can cause rare instabilities. The instability
+  only shows in hardware variants with 2 GB RAM size.
+  This release sets the RAM frequency to 1.5 GHz to
+  achieve a stable system under all conditions.
+- HDMI not functional
+
+Build Instructions:
+-------------------
+1) Install the repo tool
+  $: mkdir ~/bin
+  $: curl http://commondatastorage.googleapis.com/git-repo-downloads/repo  > ~/bin/repo
+  $: chmod a+x ~/bin/repo
+  $: PATH=${PATH}:~/bin
+2) Download imx-android-11.0.0_1.2.1.tar.gz from nxp.com
+  $: tar xvf imx-android-11.0.0_1.2.1.tar.gz
+3) Replace the 'imx_android_setup.sh' from the NXP package with the one included in this release
+4) Refer to NXP's Android User's Guide and https://source.android.com/setup/build/building
+   on how to setup a machine to build Android.
+5) Set up the environment for building.
+  $: . build/envsetup.sh
+  $: lunch phyboard_pollux-userdebug
+6) Execute imx-make.sh to build kernel and bootloader before invoking the Android buildsystem.
+  $: ./imx-make.sh -j16
+
+Changelog of Release Notes
+--------------------------
+2022-03-02
+  - initial version
