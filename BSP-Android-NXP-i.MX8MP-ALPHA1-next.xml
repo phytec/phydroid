@@ -27,7 +27,7 @@
            fetch="https://github.com/"
            review="" />
 
-  <remote name="github.phytec" fetch="git://github.com/phytec"/>
+  <remote name="github.phytec" fetch="https://github.com/phytec"/>
 
   <phytec pdn="PD-ALPHA1-next" release_uid="BSP-Android-NXP-i.MX8MP-ALPHA1-next" soc="iMX8MP" build_container="androidbuild-ubuntu20.04" />
 
